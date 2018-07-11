@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 app = Flask(__name__)
 
 import bs4
@@ -12,7 +13,7 @@ from bs4 import BeautifulSoup as soup
 
 @app.route('/')
 def hello_world():
-    name = "naina"
+    name = request.args.get('name')
     print(name)
     name = urllib.parse.quote_plus(name)
     my_url = 'https://www.musixmatch.com/search/'+name+'#'
