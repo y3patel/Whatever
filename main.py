@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup as soup
 @app.route('/')
 def hello_world():
     name = request.args.get('name')
+    name = 'blank+space'
     print(name)
     name = urllib.parse.quote_plus(name)
     my_url = 'https://www.musixmatch.com/search/'+name+'#'
