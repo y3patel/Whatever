@@ -18,7 +18,6 @@ def hello_world():
     name = urllib.parse.quote_plus(name)
     my_url = 'https://www.musixmatch.com/search/'+name+'#'
 
-
     print(my_url)
 
     req = Request(my_url, headers={'User-Agent': 'Mozilla/5.0'})
