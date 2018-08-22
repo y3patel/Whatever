@@ -2,17 +2,22 @@ from flask import Flask
 from flask import request
 app = Flask(__name__)
 
-import bs4
-import sys
-from urllib.request import urlopen 
-import urllib
-from urllib.request import Request
-from bs4 import BeautifulSoup as soup
 
+import requests
+from urllib.request import Request, urlopen
+from bs4 import BeautifulSoup as soup
+from firebase import firebase
+import json
+import os
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+import smtplib
+import time
+from PyPDF2 import PdfFileMerger
 
 @app.route('/')
 def hello_world():
-#    scrapeother('http://www.sscias.com/p/indian-express-epaper.html','tie')	
+    scrapeother('http://www.sscias.com/p/indian-express-epaper.html','tie')	
     return 'Hello,World'
 
 def scrapeother(main_url,code):
