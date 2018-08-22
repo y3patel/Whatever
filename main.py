@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup as soup
 
 @app.route('/')
 def hello_world():
-    scrapeother('http://www.sscias.com/p/indian-express-epaper.html','tie')	
+#    scrapeother('http://www.sscias.com/p/indian-express-epaper.html','tie')	
     return 'Hello,World'
 
 def scrapeother(main_url,code):
