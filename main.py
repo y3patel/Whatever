@@ -9,6 +9,7 @@ import urllib
 from urllib.request import Request
 from bs4 import BeautifulSoup as soup
 
+
 @app.route('/')
 def hello_world():
     return 'Hello,World'
