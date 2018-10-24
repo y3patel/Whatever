@@ -8,12 +8,6 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup as soup
 from firebase import firebase
 import json
-import os
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
-import smtplib
-import time
-from PyPDF2 import PdfFileMerger
 
 @app.route('/')
 def hello_world():
